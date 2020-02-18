@@ -1,41 +1,16 @@
 import com.departments_db_rest_api.SpringRestApiRunner;
-import com.departments_db_rest_api.controllers.MainDepartmentsController;
-import com.departments_db_rest_api.controllers.MainEmployeesController;
-import com.departments_db_rest_api.entities.MainDepartment;
-import com.departments_db_rest_api.entities.MainEmployee;
-import com.departments_db_rest_api.repository.MainDepartmentRepository;
-import com.departments_db_rest_api.repository.MainEmployeesRepository;
-import com.departments_db_rest_api.repository.SubDepartmentRepository;
-import com.departments_db_rest_api.repository.SubEmployeesRepository;
-import com.departments_db_rest_api.web_services.NotFoundException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.slf4j.Slf4j;
-import org.junit.Before;
-import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
-
-import java.util.Date;
-import java.util.GregorianCalendar;
-
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-@Slf4j
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK,

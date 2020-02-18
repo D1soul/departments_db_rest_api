@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -29,14 +28,12 @@ public class SubDepartment implements Serializable {
     @Column(name = "name")
     private String name;
 
-
     @JsonSerialize(using = MainDepartmentSerializer.class)
     @JsonDeserialize(using = MainDepartmentDeserializer.class)
     @JsonProperty("Main Department")
     @ManyToOne
     @JoinColumn(name = "md_id", nullable = false)
     private MainDepartment mainDepartment;
-
 
     @JsonProperty("Employees")
     @OneToMany(mappedBy = "subDepartment", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval=true)
