@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog_main_departments.yaml
+  - changeSet:
+      id: insert_table_Main_Departments
+      author: postgres
+      changes:
+        - insert:
+            tableName: main_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_Education_and_Science"
+        - insert:
+            tableName: main_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_Architecture"
+        - insert:
+            tableName: main_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_Health"

@@ -1,0 +1,205 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog_main_employees.yaml
+  - changeSet:
+      id: insert_table_Main_Employees
+      author: postgres
+      changes:
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Vasilevskaya"
+              - column:
+                  name: first_name
+                  value: "Natalya"
+              - column:
+                  name: middle_name
+                  value: "Nikolaevna"
+              - column:
+                  name: birth_date
+                  value: "1979-11-02"
+              - column:
+                  name: passport
+                  value: "22 13  122134"
+              - column:
+                  name: md_id
+                  value: 1
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Medvedev"
+              - column:
+                  name: first_name
+                  value: "Igor"
+              - column:
+                  name: middle_name
+                  value: "Alexandrovich"
+              - column:
+                  name: birth_date
+                  value: "1949-05-11"
+              - column:
+                  name: passport
+                  value: "12 43 532214"
+              - column:
+                  name: md_id
+                  value: 1
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Druzhinin"
+              - column:
+                  name: first_name
+                  value: "Yuri"
+              - column:
+                  name: middle_name
+                  value: "Mikhailovich"
+              - column:
+                  name: birth_date
+                  value: "2019-09-12"
+              - column:
+                  name: passport
+                  value: "26 12 671315"
+              - column:
+                  name: md_id
+                  value: 1
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Velikiy"
+              - column:
+                  name: first_name
+                  value: "Gabriel"
+              - column:
+                  name: middle_name
+                  value: "Maksimovich"
+              - column:
+                  name: birth_date
+                  value: "1959-01-02"
+              - column:
+                  name: passport
+                  value: "73 12  643165"
+              - column:
+                  name: md_id
+                  value: 2
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Kolesnikova"
+              - column:
+                  name: first_name
+                  value: "Olga"
+              - column:
+                  name: middle_name
+                  value: "Konstantinova"
+              - column:
+                  name: birth_date
+                  value: "1982-09-10"
+              - column:
+                  name: passport
+                  value: "51 12 145125"
+              - column:
+                  name: md_id
+                  value: 2
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Konstantinov"
+              - column:
+                  name: first_name
+                  value: "Konstantin"
+              - column:
+                  name: middle_name
+                  value: "Valerievich"
+              - column:
+                  name: birth_date
+                  value: "1959-06-02"
+              - column:
+                  name: passport
+                  value: "2213215"
+              - column:
+                  name: md_id
+                  value: 2
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Bykov"
+              - column:
+                  name: first_name
+                  value: "Fedor"
+              - column:
+                  name: middle_name
+                  value: "Valerievich"
+              - column:
+                  name: birth_date
+                  value: "1979-05-15"
+              - column:
+                  name: passport
+                  value: "21 25 416523"
+              - column:
+                  name: md_id
+                  value: 3
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Boykova"
+              - column:
+                  name: first_name
+                  value: "Valeria"
+              - column:
+                  name: middle_name
+                  value: "Ivanovna"
+              - column:
+                  name: birth_date
+                  value: "1979-05-12"
+              - column:
+                  name: passport
+                  value: "32 15 251214"
+              - column:
+                  name: md_id
+                  value: 3
+
+        - insert:
+            tableName: main_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Solomnov"
+              - column:
+                  name: first_name
+                  value: "Yuri"
+              - column:
+                  name: middle_name
+                  value: "Ivanovich"
+              - column:
+                  name: birth_date
+                  value: "1964-06-16"
+              - column:
+                  name: passport
+                  value: "21 82 573215"
+              - column:
+                  name: md_id
+                  value: 3
+
+

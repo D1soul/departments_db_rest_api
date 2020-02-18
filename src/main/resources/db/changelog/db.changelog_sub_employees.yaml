@@ -1,0 +1,401 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog_main_employees.yaml
+  - changeSet:
+      id: insert_table_Employees
+      author: postgres
+      changes:
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Bondarchuk"
+              - column:
+                  name: first_name
+                  value: "Fedor"
+              - column:
+                  name: middle_name
+                  value: "Nikiforovich"
+              - column:
+                  name: birth_date
+                  value: "1969-12-12"
+              - column:
+                  name: passport
+                  value: "25 31  442134"
+              - column:
+                  name: sd_id
+                  value: 1
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Nikifor"
+              - column:
+                  name: first_name
+                  value: "Valentina"
+              - column:
+                  name: middle_name
+                  value: "Nikolaevna"
+              - column:
+                  name: birth_date
+                  value: "1976-06-12"
+              - column:
+                  name: passport
+                  value: "42 61  736534"
+              - column:
+                  name: sd_id
+                  value: 1
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Maksimov"
+              - column:
+                  name: first_name
+                  value: "Victor"
+              - column:
+                  name: middle_name
+                  value: "Yurievich"
+              - column:
+                  name: birth_date
+                  value: "1981-07-12"
+              - column:
+                  name: passport
+                  value: "19 25  582134"
+              - column:
+                  name: sd_id
+                  value: 1
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Yashin"
+              - column:
+                  name: first_name
+                  value: "Oleg"
+              - column:
+                  name: middle_name
+                  value: "Vasilievich"
+              - column:
+                  name: birth_date
+                  value: "1974-07-17"
+              - column:
+                  name: passport
+                  value: "22 81  153254"
+              - column:
+                  name: sd_id
+                  value: 2
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Korolev"
+              - column:
+                  name: first_name
+                  value: "Ismail"
+              - column:
+                  name: middle_name
+                  value: "Evgenievich"
+              - column:
+                  name: birth_date
+                  value: "1976-02-22"
+              - column:
+                  name: passport
+                  value: "84 21  635334"
+              - column:
+                  name: sd_id
+                  value: 2
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Klimov"
+              - column:
+                  name: first_name
+                  value: "Maksim"
+              - column:
+                  name: middle_name
+                  value: "Victorovich"
+              - column:
+                  name: birth_date
+                  value: "1958-01-12"
+              - column:
+                  name: passport
+                  value: "15 75  124134"
+              - column:
+                  name: sd_id
+                  value: 2
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Kravtsova"
+              - column:
+                  name: first_name
+                  value: "Yana"
+              - column:
+                  name: middle_name
+                  value: "Yuryevna"
+              - column:
+                  name: birth_date
+                  value: "1977-09-17"
+              - column:
+                  name: passport
+                  value: "18 82  636554"
+              - column:
+                  name: sd_id
+                  value: 3
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Borisov"
+              - column:
+                  name: first_name
+                  value: "Vladimir"
+              - column:
+                  name: middle_name
+                  value: "Konstantinovich"
+              - column:
+                  name: birth_date
+                  value: "1986-12-02"
+              - column:
+                  name: passport
+                  value: "14 25  663334"
+              - column:
+                  name: sd_id
+                  value: 3
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Harutyunyan"
+              - column:
+                  name: first_name
+                  value: "Albert"
+              - column:
+                  name: middle_name
+                  value: "Iskanderovich"
+              - column:
+                  name: birth_date
+                  value: "1971-05-17"
+              - column:
+                  name: passport
+                  value: "17 65  673234"
+              - column:
+                  name: sd_id
+                  value: 3
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Klimov"
+              - column:
+                  name: first_name
+                  value: "Sergey"
+              - column:
+                  name: middle_name
+                  value: "Mikhailovich"
+              - column:
+                  name: birth_date
+                  value: "1965-11-15"
+              - column:
+                  name: passport
+                  value: "71 25  523234"
+              - column:
+                  name: sd_id
+                  value: 4
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Borisova"
+              - column:
+                  name: first_name
+                  value: "Ekaterina"
+              - column:
+                  name: middle_name
+                  value: "Aleksandrovna"
+              - column:
+                  name: birth_date
+                  value: "1977-05-11"
+              - column:
+                  name: passport
+                  value: "11 51  634234"
+              - column:
+                  name: sd_id
+                  value: 4
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Krivoy"
+              - column:
+                  name: first_name
+                  value: "Konstantin"
+              - column:
+                  name: middle_name
+                  value: "Timurovich"
+              - column:
+                  name: birth_date
+                  value: "1976-04-02"
+              - column:
+                  name: passport
+                  value: "82 25  847234"
+              - column:
+                  name: sd_id
+                  value: 4
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Kumirov"
+              - column:
+                  name: first_name
+                  value: "Valentin"
+              - column:
+                  name: middle_name
+                  value: "Tigranovich"
+              - column:
+                  name: birth_date
+                  value: "1982-03-05"
+              - column:
+                  name: passport
+                  value: "42 15  954234"
+              - column:
+                  name: sd_id
+                  value: 5
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Narimova"
+              - column:
+                  name: first_name
+                  value: "Nargiz"
+              - column:
+                  name: middle_name
+                  value: "Sufyanovna"
+              - column:
+                  name: birth_date
+                  value: "1969-02-12"
+              - column:
+                  name: passport
+                  value: "32 15  872134"
+              - column:
+                  name: sd_id
+                  value: 5
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Gaychuk"
+              - column:
+                  name: first_name
+                  value: "Muslim"
+              - column:
+                  name: middle_name
+                  value: "Suleymanov"
+              - column:
+                  name: birth_date
+                  value: "1971-07-15"
+              - column:
+                  name: passport
+                  value: "91 12  147214"
+              - column:
+                  name: sd_id
+                  value: 5
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Marchuk"
+              - column:
+                  name: first_name
+                  value: "Milana"
+              - column:
+                  name: middle_name
+                  value: "Dmitrievna"
+              - column:
+                  name: birth_date
+                  value: "1985-02-07"
+              - column:
+                  name: passport
+                  value: "95 22  737215"
+              - column:
+                  name: sd_id
+                  value: 6
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Kuchma"
+              - column:
+                  name: first_name
+                  value: "Nazar"
+              - column:
+                  name: middle_name
+                  value: "Nikolaevich"
+              - column:
+                  name: birth_date
+                  value: "1964-05-12"
+              - column:
+                  name: passport
+                  value: "42 62  737212"
+              - column:
+                  name: sd_id
+                  value: 6
+
+        - insert:
+            tableName: sub_employees
+            columns:
+              - column:
+                  name: last_name
+                  value: "Kulibin"
+              - column:
+                  name: first_name
+                  value: "Alexey"
+              - column:
+                  name: middle_name
+                  value: "Timurovich"
+              - column:
+                  name: birth_date
+                  value: "1970-10-05"
+              - column:
+                  name: passport
+                  value: "74 62  533624"
+              - column:
+                  name: sd_id
+                  value: 6

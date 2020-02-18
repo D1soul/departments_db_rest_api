@@ -1,0 +1,68 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog_sub_departments.yaml
+  - changeSet:
+      id: insert_table_Sub_Departments
+      author: postgres
+      changes:
+        - insert:
+            tableName: sub_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_Preschool_Education"
+              - column:
+                  name: md_id
+                  value: 1
+
+        - insert:
+            tableName: sub_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_General_Education"
+              - column:
+                  name: md_id
+                  value: 1
+
+        - insert:
+            tableName: sub_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_Territorial_Planning_and_Urban_Zoning"
+              - column:
+                  name: md_id
+                  value: 2
+
+        - insert:
+            tableName: sub_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_Urban_Development_Information_Support"
+              - column:
+                  name: md_id
+                  value: 2
+
+        - insert:
+            tableName: sub_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_for_the_provision_of_medicines_and_medical_devices"
+              - column:
+                  name: md_id
+                  value: 3
+
+        - insert:
+            tableName: sub_departments
+            columns:
+              - column:
+                  name: name
+                  value: "Department_of_Financial_Accounting"
+              - column:
+                  name: md_id
+                  value: 3
+
+
+
