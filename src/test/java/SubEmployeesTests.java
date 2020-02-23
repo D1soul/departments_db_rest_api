@@ -69,7 +69,7 @@ public class SubEmployeesTests {
                           + "\"Middle Name\": \"Yurievich\","
                           + "\"Birth Date\": \"1975-12-12\","
                           + "\"Passport\": \"24 12 521214\","
-                          + "\"Sub-Department\": \"Department_of_General_Education\""
+                          + "\"Sub-Department\": \"Department of General Education\""
                           + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -89,7 +89,7 @@ public class SubEmployeesTests {
                           + "\"Middle Name\": \"Yurievich\","
                           + "\"Birth Date\": \"1981-07-15\","
                           + "\"Passport\": \"19 25  582134\","
-                          + "\"Sub-Department\": \"Department_of_Preschool_Education\""
+                          + "\"Sub-Department\": \"Department of Preschool Education\""
                           + "}";
 
         mockMvc.perform(MockMvcRequestBuilders

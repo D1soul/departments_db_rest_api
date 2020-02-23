@@ -54,7 +54,7 @@ public class MainDepartmentsTests {
     @Test
     public void findMaiDepByName() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders
-                .get(URL_FIND_MAIN_DEP_BY_NAME, "Department_of_Education_and_Science")
+                .get(URL_FIND_MAIN_DEP_BY_NAME, "Department of Architecture")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(print());
@@ -72,7 +72,7 @@ public class MainDepartmentsTests {
     @Test
     public  void updateMainDepTest() throws Exception{
         String updateMainDep = "{"
-                             +  "\"Name\": \"Department_of_Education\""
+                             +  "\"Name\": \"Department of Education\""
                              +  "}";
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -87,7 +87,7 @@ public class MainDepartmentsTests {
     @Test
     public  void createMainDepTest() throws Exception{
         String createMainDep = "{"
-                             + "\"Name\": \"Department_of_Agriculture\""
+                             + "\"Name\": \"Department of Agriculture\""
                              + "}";
 
         mockMvc.perform(MockMvcRequestBuilders

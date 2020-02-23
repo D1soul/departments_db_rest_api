@@ -32,7 +32,7 @@ public class CreateAllTogether {
     @Test
     public  void createMainDepTest() throws Exception{
         String createMainDep = "{"
-                + "\"Name\": \"Department_of_Culture\""
+                + "\"Name\": \"Department of Culture\""
                 + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -47,7 +47,7 @@ public class CreateAllTogether {
                           + "\"Middle Name\": \"Asanovich\","
                           + "\"Birth Date\": \"1959-01-03\","
                           + "\"Passport\": \"52 13 653214\","
-                          + "\"Main Department\": \"Department_of_Culture\""
+                          + "\"Main Department\": \"Department of Culture\""
                           + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -58,7 +58,7 @@ public class CreateAllTogether {
 
         String createSubDep = "{"
                 + "\"Name\": \"Department of Music\","
-                + "\"Main Department\": \"Department_of_Culture\""
+                + "\"Main Department\": \"Department of Culture\""
                 + "}";
 
         mockMvc.perform(MockMvcRequestBuilders

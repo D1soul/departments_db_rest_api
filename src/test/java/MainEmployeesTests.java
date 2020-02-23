@@ -67,7 +67,7 @@ public class MainEmployeesTests {
                           + "\"Middle Name\": \"Asanovich\","
                           + "\"Birth Date\": \"1959-01-03\","
                           + "\"Passport\": \"52 13 653214\","
-                          + "\"Main Department\": \"Department_of_Health\""
+                          + "\"Main Department\": \"Department of Health\""
                           + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -87,7 +87,7 @@ public class MainEmployeesTests {
                           + "\"Middle Name\": \"Alexandrovich\","
                           + "\"Birth Date\": \"1949-05-11\","
                           + "\"Passport\": \"12 43 532214\","
-                          + "\"Main Department\": \"Department_of_Health\""
+                          + "\"Main Department\": \"Department of Health\""
                           + "}";
 
         mockMvc.perform(MockMvcRequestBuilders

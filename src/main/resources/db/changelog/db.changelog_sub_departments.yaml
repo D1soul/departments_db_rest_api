@@ -9,7 +9,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: name
-                  value: "Department_of_Preschool_Education"
+                  value: "Department of Preschool Education"
               - column:
                   name: md_id
                   value: 1
@@ -19,7 +19,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: name
-                  value: "Department_of_General_Education"
+                  value: "Department of General Education"
               - column:
                   name: md_id
                   value: 1
@@ -29,7 +29,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: name
-                  value: "Department_of_Territorial_Planning_and_Urban_Zoning"
+                  value: "Department of Territorial Planning and Urban Zoning"
               - column:
                   name: md_id
                   value: 2
@@ -39,7 +39,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: name
-                  value: "Department_of_Urban_Development_Information_Support"
+                  value: "Department of Urban Development Information Support"
               - column:
                   name: md_id
                   value: 2
@@ -49,7 +49,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: name
-                  value: "Department_for_the_provision_of_medicines_and_medical_devices"
+                  value: "Department for the provision of medicines and medical devices"
               - column:
                   name: md_id
                   value: 3
@@ -59,7 +59,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: name
-                  value: "Department_of_Financial_Accounting"
+                  value: "Department of Financial Accounting"
               - column:
                   name: md_id
                   value: 3

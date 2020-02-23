@@ -38,7 +38,7 @@ public class MainDepartmentsController {
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping(value = "/main_departments/name/{name:[\\w\\S]+}")
+    @GetMapping(value = "/main_departments/name/{name:[\\w\\s]+}")
     public MainDepartment findByName(@PathVariable String name) {
         Optional<MainDepartment> mainDepartments = mainDepartmentRepository.findByName(name);
          if(mainDepartments.isPresent()) {

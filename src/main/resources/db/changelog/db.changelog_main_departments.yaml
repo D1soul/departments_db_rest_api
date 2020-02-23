@@ -9,16 +9,16 @@ databaseChangeLog:
             columns:
               - column:
                   name: name
-                  value: "Department_of_Education_and_Science"
+                  value: "Department of Education and Science"
         - insert:
             tableName: main_departments
             columns:
               - column:
                   name: name
-                  value: "Department_of_Architecture"
+                  value: "Department of Architecture"
         - insert:
             tableName: main_departments
             columns:
               - column:
                   name: name
-                  value: "Department_of_Health"
+                  value: "Department of Health"

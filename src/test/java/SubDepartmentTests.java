@@ -62,7 +62,7 @@ public class SubDepartmentTests {
     @Test
     public void findSubDepByName() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders
-                .get(URL_FIND_SUB_DEP_BY_NAME, 1, "Department_of_Preschool_Education")
+                .get(URL_FIND_SUB_DEP_BY_NAME, 1, "Department of Preschool Education")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(print());
@@ -71,8 +71,8 @@ public class SubDepartmentTests {
     @Test
     public  void createSubDepTest() throws Exception{
         String createSubDep = "{"
-                            + "\"Name\": \"Department_of_architectural_appearance_and_urban_environment\","
-                            + "\"Main Department\": \"Department_of_Architecture\""
+                            + "\"Name\": \"Department of architectural appearance and urban environment\","
+                            + "\"Main Department\": \"Department of Architecture\""
                             + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -87,8 +87,8 @@ public class SubDepartmentTests {
     @Test
     public  void updateSubDepTest() throws Exception{
         String updateSubDep = "{"
-                            + "\"Name\": \"Department_of_General_Education_and_Training\","
-                            + "\"Main Department\": \"Department_of_Education_and_Science\""
+                            + "\"Name\": \"Department of General Education and Training\","
+                            + "\"Main Department\": \"Department of Education and Science\""
                             + "}";
 
         mockMvc.perform(MockMvcRequestBuilders

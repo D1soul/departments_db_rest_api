@@ -56,7 +56,7 @@ public class SubDepartmentController {
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping(value = "/{mainDepId:\\d+}/sub_departments/name/{name:[\\w\\S]+}")
+    @GetMapping(value = "/{mainDepId:\\d+}/sub_departments/name/{name:[\\w\\s]+}")
     public SubDepartment findSubDepByName(@PathVariable Long mainDepId,
                                           @PathVariable String name) {
         if(mainDepartmentRepository.existsById(mainDepId)) {
