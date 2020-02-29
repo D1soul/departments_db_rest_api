@@ -16,18 +16,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = SpringRestApiRunner.class)
 @AutoConfigureMockMvc
-@TestPropertySource(
-        locations = "classpath:application.yaml")
+@TestPropertySource(locations = "classpath:application.yaml")
 public class CreateAllTogether {
 
     @Autowired
     private MockMvc mockMvc;
-    private static final String URL_FIND_ALL_MAIN_DEPARTMENTS = "http://localhost:8080/departments/main_departments";
-    private static final String URL_CREATE_MAIN_DEP = "http://localhost:8080/departments/main_departments/";
-    private static final String URL_CREATE_MAIN_EMPL = "http://localhost:8080/departments/main_departments/main_employees";
-    private static final String URL_CREATE_SUB_DEP = "http://localhost:8080/departments/main_departments/sub_departments";
-    private static final String URL_CREATE_SUB_EMPL = "http://localhost:8080/departments/main_departments/sub_employees";
-
+    private static final String URL_FIND_ALL_MAIN_DEPARTMENTS = "http://localhost:8080/departments_app/main_departments";
+    private static final String URL_CREATE_MAIN_DEP = "http://localhost:8080/departments_app/main_departments/";
+    private static final String URL_CREATE_MAIN_EMPL = "http://localhost:8080/departments_app/main_employees";
+    private static final String URL_CREATE_SUB_DEP = "http://localhost:8080/departments_app/sub_departments";
+    private static final String URL_CREATE_SUB_EMPL = "http://localhost:8080/departments_app/sub_employees";
 
     @Test
     public  void createMainDepTest() throws Exception{

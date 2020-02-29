@@ -4,7 +4,8 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: root
-    url: jdbc:postgresql://localhost:9200/departmentsDb
+    #url: jdbc:postgresql://localhost:9200/departmentsDb
+    url: jdbc:postgresql://localhost:5432/departmentsDb
 
   jpa:
     database: postgresql

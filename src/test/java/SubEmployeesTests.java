@@ -16,23 +16,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = SpringRestApiRunner.class)
 @AutoConfigureMockMvc
-@TestPropertySource(
-        locations = "classpath:application.yaml")
+@TestPropertySource(locations = "classpath:application.yaml")
 public class SubEmployeesTests {
 
     @Autowired
     private MockMvc mockMvc;
-
-    private static final String URL_FIND_ALL_SUB_EMPL = "http://localhost:8080/departments/main_departments/sub_employees";
-    private static final String URL_FIND_SUB_EMPLS_BY_SD_ID =
-                "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/{subDepId}";
-    private static final String URL_FIND_SUB_EMPL_BY_ID =
-                "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/{subDepId}/employees/{id}";
-    private static final String URL_UPDATE_SUB_EMPL =
-                "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/{subDepId}/employees/{id}";
-    private static final String URL_CREATE_SUB_EMPL = "http://localhost:8080/departments/main_departments/sub_employees";
-    private static final String URL_DELETE_SUB_EMPL =
-                "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/{subDepId}/employees/{id}";
+    private static final String URL_FIND_ALL_SUB_EMPL = "http://localhost:8080/departments_app/sub_employees";
+    private static final String URL_FIND_SUB_EMPL_BY_ID = "http://localhost:8080/departments_app/sub_employees/{id}";
+    private static final String URL_UPDATE_SUB_EMPL = "http://localhost:8080/departments_app/sub_employees/{id}";
+    private static final String URL_CREATE_SUB_EMPL = "http://localhost:8080/departments_app/sub_employees";
+    private static final String URL_DELETE_SUB_EMPL = "http://localhost:8080/departments_app/sub_employees/{id}";
 
     @Test
     public void findAllSubEmplsTest() throws Exception
@@ -44,18 +37,9 @@ public class SubEmployeesTests {
     }
 
     @Test
-    public void findSubEmplsBySDIdTest() throws Exception
-    {        mockMvc.perform(MockMvcRequestBuilders
-            .get(URL_FIND_SUB_EMPLS_BY_SD_ID, 1, 2)
-            .contentType(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andDo(print());
-    }
-
-    @Test
     public void findSubEmplByIdTest() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-                .get(URL_FIND_SUB_EMPL_BY_ID, 1, 3, 3)
+                .get(URL_FIND_SUB_EMPL_BY_ID, 3)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(print());
@@ -69,7 +53,7 @@ public class SubEmployeesTests {
                           + "\"Middle Name\": \"Yurievich\","
                           + "\"Birth Date\": \"1975-12-12\","
                           + "\"Passport\": \"24 12 521214\","
-                          + "\"Sub-Department\": \"Department of General Education\""
+                          + "\"Sub-Department\": \"Department of Preschool Education\""
                           + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -93,7 +77,7 @@ public class SubEmployeesTests {
                           + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
-                .put(URL_UPDATE_SUB_EMPL, 1, 2, 2)
+                .put(URL_UPDATE_SUB_EMPL, 2)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
                 .content(updateEmpl))
@@ -102,10 +86,10 @@ public class SubEmployeesTests {
     }
 
     @Test
-    public void deleteMainEmplTest() throws Exception
+    public void deleteSubEmplTest() throws Exception
     {
         mockMvc.perform( MockMvcRequestBuilders
-                .delete(URL_DELETE_SUB_EMPL, 1, 1, 1))
+                .delete(URL_DELETE_SUB_EMPL, 1))
                 .andExpect(status().isNoContent());
 
         mockMvc.perform(MockMvcRequestBuilders

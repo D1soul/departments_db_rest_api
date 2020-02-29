@@ -16,22 +16,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = SpringRestApiRunner.class)
 @AutoConfigureMockMvc
-@TestPropertySource(
-        locations = "classpath:application.yaml")
+@TestPropertySource(locations = "classpath:application.yaml")
 public class MainDepartmentsTests {
 
     @Autowired
     private MockMvc mockMvc;
-
-    private static final String URL_FIND_ALL_MAIN_DEPARTMENTS = "http://localhost:8080/departments/main_departments";
-    private static final String URL_FIND_MAIN_DEP_BY_ID = "http://localhost:8080/departments/main_departments/{id}";
-    private static final String URL_FIND_MAIN_DEP_BY_NAME = "http://localhost:8080/departments/main_departments/name/{name}";
-    private static final String URL_FIND_MAIN_DEP_BY_EMPL_FIRST_NAME =
-                          "http://localhost:8080/departments/main_departments/findByEmplFirstName/{firstName}";
-    private static final String URL_UPDATE_MAIN_DEP = "http://localhost:8080/departments/main_departments/{id}";
-    private static final String URL_CREATE_MAIN_DEP = "http://localhost:8080/departments/main_departments/";
-    private static final String URL_DELETE_MAIN_DEP = "http://localhost:8080/departments/main_departments/{id}";
-
+    private static final String URL_FIND_ALL_MAIN_DEPARTMENTS = "http://localhost:8080/departments_app/main_departments";
+    private static final String URL_FIND_MAIN_DEP_BY_ID = "http://localhost:8080/departments_app/main_departments/{id}";
+    private static final String URL_FIND_MAIN_DEP_BY_NAME = "http://localhost:8080/departments_app/main_departments/name/{name}";
+    private static final String URL_UPDATE_MAIN_DEP = "http://localhost:8080/departments_app/main_departments/{id}";
+    private static final String URL_CREATE_MAIN_DEP = "http://localhost:8080/departments_app/main_departments/";
+    private static final String URL_DELETE_MAIN_DEP = "http://localhost:8080/departments_app/main_departments/{id}";
 
     @Test
     public void getAllMainDepTest() throws Exception {
@@ -55,15 +50,6 @@ public class MainDepartmentsTests {
     public void findMaiDepByName() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders
                 .get(URL_FIND_MAIN_DEP_BY_NAME, "Department of Architecture")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andDo(print());
-    }
-
-    @Test
-    public void findMaiDepByEmplFirstName() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders
-                .get(URL_FIND_MAIN_DEP_BY_EMPL_FIRST_NAME, "Valeria")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(print());
@@ -103,7 +89,7 @@ public class MainDepartmentsTests {
     public void deleteMainDepTest() throws Exception
     {
         mockMvc.perform( MockMvcRequestBuilders
-                .delete(URL_DELETE_MAIN_DEP, 2) )
+                .delete(URL_DELETE_MAIN_DEP, 3) )
                 .andExpect(status().isNoContent());
 
         mockMvc.perform(MockMvcRequestBuilders

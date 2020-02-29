@@ -9,4 +9,6 @@ import java.util.List;
 public interface MainEmployeesRepository extends JpaRepository<MainEmployee, Long> {
 
     List<MainEmployee> findByMainDepartmentId (Long mainDepartmentId);
+
+    void deleteById(Long id);
 }

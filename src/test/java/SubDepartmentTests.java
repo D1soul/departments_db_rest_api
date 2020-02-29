@@ -16,21 +16,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = SpringRestApiRunner.class)
 @AutoConfigureMockMvc
-@TestPropertySource(
-        locations = "classpath:application.yaml")
+@TestPropertySource(locations = "classpath:application.yaml")
 public class SubDepartmentTests {
 
     @Autowired
     private MockMvc mockMvc;
-
-    private static final String URL_FIND_ALL_SUB_DEP = "http://localhost:8080/departments/main_departments/sub_departments";
-    private static final String URL_FIND_SUB_DEP_BY_ID = "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/{id}";
-    private static final String URL_FIND_SUB_DEPS_BY_MD_ID = "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments";
-    private static final String URL_FIND_SUB_DEP_BY_NAME = "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/name/{name}";
-    private static final String URL_UPDATE_SUB_DEP = "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/{id}";
-    private static final String URL_CREATE_SUB_DEP = "http://localhost:8080/departments/main_departments/sub_departments";
-    private static final String URL_DELETE_SUB_DEP = "http://localhost:8080/departments/main_departments/{mainDepId}/sub_departments/{id}";
-
+    private static final String URL_FIND_ALL_SUB_DEP = "http://localhost:8080/departments_app/sub_departments";
+    private static final String URL_FIND_SUB_DEP_BY_ID = "http://localhost:8080/departments_app/sub_departments/{id}";
+    private static final String URL_FIND_SUB_DEP_BY_NAME = "http://localhost:8080/departments_app/sub_departments/name/{name}";
+    private static final String URL_UPDATE_SUB_DEP = "http://localhost:8080/departments_app/sub_departments/{id}";
+    private static final String URL_CREATE_SUB_DEP = "http://localhost:8080/departments_app/sub_departments";
+    private static final String URL_DELETE_SUB_DEP = "http://localhost:8080/departments_app/sub_departments/{id}";
 
     @Test
     public void findAllSubDepTest() throws Exception
@@ -42,18 +38,9 @@ public class SubDepartmentTests {
     }
 
     @Test
-    public void findSubDepsByMDIdTest() throws Exception
-    {        mockMvc.perform(MockMvcRequestBuilders
-            .get(URL_FIND_SUB_DEPS_BY_MD_ID, 1)
-            .contentType(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andDo(print());
-    }
-
-    @Test
     public void findSubDepByIdTest() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-                .get(URL_FIND_SUB_DEP_BY_ID, 1, 2)
+                .get(URL_FIND_SUB_DEP_BY_ID, 2)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(print());
@@ -62,7 +49,7 @@ public class SubDepartmentTests {
     @Test
     public void findSubDepByName() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders
-                .get(URL_FIND_SUB_DEP_BY_NAME, 1, "Department of Preschool Education")
+                .get(URL_FIND_SUB_DEP_BY_NAME, "Department of Preschool Education")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(print());
@@ -92,7 +79,7 @@ public class SubDepartmentTests {
                             + "}";
 
         mockMvc.perform(MockMvcRequestBuilders
-                .put(URL_UPDATE_SUB_DEP, 1, 2)
+                .put(URL_UPDATE_SUB_DEP, 2)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
                 .content(updateSubDep))
@@ -104,7 +91,7 @@ public class SubDepartmentTests {
     public void deleteMainEmplTest() throws Exception
     {
         mockMvc.perform( MockMvcRequestBuilders
-                .delete(URL_DELETE_SUB_DEP, 1, 2))
+                .delete(URL_DELETE_SUB_DEP, 6))
                 .andExpect(status().isNoContent());
 
         mockMvc.perform(MockMvcRequestBuilders

@@ -1,7 +1,7 @@
 package com.departments_db_rest_api.web_services;
 
 import com.departments_db_rest_api.entities.SubDepartment;
-import com.departments_db_rest_api.repository.SubDepartmentRepository;
+import com.departments_db_rest_api.services.SubDepartmentService;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -16,11 +16,11 @@ public class SubDepartmentDeserializer extends JsonDeserializer<SubDepartment> {
     public SubDepartmentDeserializer(){
     }
 
-    private SubDepartmentRepository subDepartmentRepository;
+    private SubDepartmentService subDepartmentService;
 
     @Autowired
-    public SubDepartmentDeserializer(SubDepartmentRepository subDepartmentRepository){
-        this.subDepartmentRepository = subDepartmentRepository;
+    public SubDepartmentDeserializer(SubDepartmentService subDepartmentService){
+        this.subDepartmentService = subDepartmentService;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class SubDepartmentDeserializer extends JsonDeserializer<SubDepartment> {
 
         String name = jsonParser.getValueAsString();
 
-        SubDepartment subDepartment = subDepartmentRepository.findByName(name).get();
+        SubDepartment subDepartment = subDepartmentService.findByName(name).get();
 
         return subDepartment;
     }

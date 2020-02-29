@@ -1,7 +1,7 @@
 package com.departments_db_rest_api.web_services;
 
 import com.departments_db_rest_api.entities.MainDepartment;
-import com.departments_db_rest_api.repository.MainDepartmentRepository;
+import com.departments_db_rest_api.services.MainDepartmentService;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -13,14 +13,14 @@ import java.io.IOException;
 @JsonComponent
 public class MainDepartmentDeserializer extends JsonDeserializer<MainDepartment> {
 
-    private MainDepartmentRepository mainDepartmentRepository;
+    private MainDepartmentService mainDepartmentService;
 
     public MainDepartmentDeserializer(){
     }
 
     @Autowired
-    public MainDepartmentDeserializer(MainDepartmentRepository mainDepartmentRepository){
-        this.mainDepartmentRepository = mainDepartmentRepository;
+    public MainDepartmentDeserializer(MainDepartmentService mainDepartmentService){
+        this.mainDepartmentService = mainDepartmentService;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class MainDepartmentDeserializer extends JsonDeserializer<MainDepartment>
 
         String name = jsonParser.getValueAsString();
 
-        MainDepartment mainDepartment = mainDepartmentRepository.findByName(name).get();
+        MainDepartment mainDepartment = mainDepartmentService.findByName(name).get();
 
         return mainDepartment;
     }
