@@ -7,8 +7,5 @@ import java.util.List;
 
 @Repository
 public interface SubEmployeesRepository extends JpaRepository<SubEmployee, Long> {
-
-    List<SubEmployee> findBySubDepartmentId(Long subDepartmentId);
-
     void deleteById(Long id);
 }

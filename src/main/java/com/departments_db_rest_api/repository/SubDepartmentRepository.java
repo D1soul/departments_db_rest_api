@@ -8,11 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface SubDepartmentRepository extends JpaRepository<SubDepartment, Long> {
-
     Optional<SubDepartment> findByName(String name);
-
-    List<SubDepartment> findByMainDepartmentId (Long mainDepartmentId);
-
     void deleteById(Long id);
-
 }

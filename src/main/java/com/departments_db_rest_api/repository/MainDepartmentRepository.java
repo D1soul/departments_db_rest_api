@@ -9,13 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface MainDepartmentRepository extends JpaRepository<MainDepartment, Long> {
-
     Optional<MainDepartment> findByName(String name);
-
-    @Query("select distinct m from MainDepartment m join m.mainEmployees me "
-            + " join m.subDepartment s join s.subEmployees se "
-            + " where me.firstName = :firstName")
-    Optional<MainDepartment> findMDByEmplFirstName(@Param("firstName") String firstName);
-
     void deleteById(Long id);
 }
